@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { io } from "socket.io-client";
 
-const Join = ({ setHasUser }) => {
+const Join = ({ setHasUser, setSocket }) => {
     const [username, setUsername] = useState('')
 
     const handleJoin = async () => {
         if (username.trim()) {
             const socket = await io.connect('http://localhost:3001')
             socket.emit('set_username', username)
+            setSocket(socket);
             setHasUser(true);
         }
 

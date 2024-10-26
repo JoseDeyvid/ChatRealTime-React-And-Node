@@ -5,10 +5,11 @@ import Join from './components/Join';
 
 function App() {
   const [hasUser, setHasUser] = useState(false);
+  const [socket, setSocket] = useState();
 
   return (
     <div>
-      {hasUser ? <Chat/> : <Join setHasUser={setHasUser}/>}
+      {hasUser ? <Chat socket={socket}/> : <Join setHasUser={setHasUser} setSocket={setSocket}/>}
     </div>
   )
 }
