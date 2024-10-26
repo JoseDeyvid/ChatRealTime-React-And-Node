@@ -1,4 +1,14 @@
 .chat {
     width: 600px;
     height: 400px;border: 1px solid #000;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.author {
+    color: blue;
+}
+
+.guest {
+    color: green;
 }

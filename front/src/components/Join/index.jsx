@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { io } from "socket.io-client";
 
-const Join = ({ setHasUser, setSocket }) => {
-    const [username, setUsername] = useState('')
+const Join = ({ setHasUser, setSocket, username, setUsername }) => {
 
     const handleJoin = async () => {
         if (username.trim()) {
